@@ -13,7 +13,8 @@ $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 write_query_result($data[0]);
 
 function write_query_result($result) {
-    foreach($result as $item) { echo "Returned rows are: " . $item . "\n"; }
+    echo "Returned rows are: \n";
+    foreach($result as $item) { echo (string) $item . "\n"; }
 }
 
 function check_mysql_connection($conn) {
